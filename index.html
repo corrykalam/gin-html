@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Status Cuaca</title>
+    <meta http-equiv="refresh" content="15">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .on-center {
+            position:absolute;
+            height: X px;
+            width: Y px;
+            left:40%;
+            top:30%;
+            margin-top:- X/2 px;
+            margin-left:- Y/2 px;
+        }
+    </style>
+</head>
+<body style="background: black;">
+    <div class="on-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://icon-library.com/images/water-icon-png/water-icon-png-3.jpg" alt="water image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Status Mutu Air</h5>
+                            <p class="card-text">Status mutu air adalah tingkat kondisi mutu air yang menunjukkan kondisi cemar atau kondisi baik padasuatu sumber air dalam waktu tertentu dengan membandingkan dengan baku mutu air yang ditetapkan. <br><br> kondisi saat ini: {{ .water }}</p>
+                            <a href="#" class="btn btn-primary">{{ .statusWater }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://png.pngtree.com/png-vector/20190630/ourlarge/pngtree-wind-icon-for-your-project-png-image_1532086.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Status Udara</h5>
+                            <p class="card-text">Status udara Lorem ipsum dolor sit amet.
+                            Porro laudantium officiis culpa maxime.
+                            Ad libero pariatur placeat totam.
+                            Excepturi, pariatur. Ratione, vel unde.
+                            Vitae dignissimos aperiam ipsa ratione.
+                            Vitae
+                            <br><br>kondisi saat ini : {{ .wind }}
+                            </p>
+                            <a href="#" class="btn btn-primary">{{ .statusWind }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>     
+</body>
+</html>
